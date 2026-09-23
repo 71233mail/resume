@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>ronvox-cv</title>
+
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/jquery-scrolltofixed.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+          // Dock the header to the top of the window when scrolled past the banner.
+          // This is the default behavior.
+          $('.header').scrollToFixed();
+          // Dock the footer to the bottom of the page, but scroll up to reveal more
+          // content if the page is scrolled far enough.
+          $('.footer').scrollToFixed( {
+            bottom: 0,
+            limit: $('.footer').offset().top
+          });
+          // Dock each summary as it arrives just below the docked header, pushing the
+          // previous summary up the page.
+          var summaries = $('.summary');
+          summaries.each(function(i) {
+          var summary = $(summaries[i]);
+              var next = summaries[i + 1];
+                  summary.scrollToFixed({
+                    marginTop: $('.header').outerHeight(true) + 10,
+                    limit: function() {
+                        var limit = 0;
+                        if (next) {
+                        limit = $(next).offset().top - $(this).outerHeight(true) - 10;
+                        } else {
+                          limit = $('.footer').offset().top - $(this).outerHeight(true) - 10;
+                        }
+                        return limit;
+                    },
+                    zIndex: 999
+                  });
+          });
+      });
+    </script>
+  </head>
+
+  <body>
+    <ul>
+      <li class="banner">
+        <div class="main">
+          <span class="title">HIGHLIGHT </span>
+          <span> - A Technology Professional experienced in Linux and Windows Systems Administration, WAN and LAN Network Management, Network Security, Software Development, and Technical Consulting. I am a self-directed learner, team player, and a result oriented professional with positive mindset, ready to bring my years of experience and skills to your organization.
+          </span>
+            <a href="./downloads/cv.pdf" target="_blank" style="color:#ffcc00">DOWNLOAD RESUME</a>
+        </div>
+        </section>
+      </li>
+      <li class="header">
+        <div class="main">
+          <span class="title"><a href="index.html">Rony Estrada</a></span>
+          <span> ------- Curriculum Vitae ------- </span></br>
+          <span class="myinfo">Phones: +502.5352.3536 or +1.416.577.9150 | Email: 71233mail@gmail.com</span></br>
+          <span class="myinfo">Resume: ronvox.com | LinkedIn: https://linkedin.com/in/ronvox/ Whatsapp: +1.416.577.9150 </span>
+        </div>
+      </li>
+
+<!-- Experience seccion -->
+
+      <li class="content main">
+      <ul>
+        <li class="left">
+            <h1 id="Experience">Work Experience</h1>
+        <!--</li>-->
+        <!--<li class="left">-->
+
+        <!--right row-->
+        <div class="12u">
+          <section>
+              <h3>IT Service Desk - Client Support Specialist, The Minto Group, Toronto, ON.</h3>
+              <span class="byline">April 2021 - Present Day</span>
+              <b><p>Job Description and Responsibilities:</p></b>
+              <ul class="default2">
+                <li>Provide IT service and technical support to approximately 1200 clients</li>
+                <li>Field incoming IT support requests; triage, classification and assignment</li>
+                <li>Resolve IT support requests</li>
+                <li>Maintain accurate and detailed service records</li>
+                <li>Escalate advanced cases to functional IT groups</li>
+                <li>Use of diagnostic and troubleshooting tools and utilities</li>
+                <li>Perform system testing and updates</li>
+                <li>Perform hands-on fixes at the workstation level</li>
+                <li>Perform Hardware/Software installs and upgrades</li>
+                <li>Perform preventative maintenance on desktop systems</li>
+                <li>Desktop replacements including full profile transition</li>
+                <li>Develop and maintain IT Knowledge Base and FAQs</li>
+                <li>Hardware and software asset management</li>
+                <li>Service delivery in alignment with Service Level Objectives to manage end-user expectations</li>
+                <li>Work with IT functional teams in a supportive or collaborative capacity</li>
+                <li>Work directly with 3rd party vendors and support teams.</li>
+                <li>chnical Knowledge & Experience</li>
+                <li>Experience and comprehensive knowledge with Windows 10</li>
+                <li>Experience with Microsoft Office suites</li>
+                <li>Experience Microsoft server operating systems</li>
+                <li>Experience working with Active Directory environment</li>
+                <li>Experience configuring and troubleshooting advanced computing hardware such as Switches, Routers and Servers</li>
+                <li>Experience configuring, troubleshooting mobile devices such as Smart Phones and Tablets</li>
+                <li>Experience with Citrix and VDI an asset</li>
+
+                <b><p>Soft Skills and Experience</p></b>
+                <li>Ability to effectively prioritize and execute tasks in a demanding environment</li>
+                <li>Ability to work in a team-oriented, collaborative environment</li>
+                <li>Exceptional customer service orientation</li>
+                <li>Exceptional written and oral communication skills</li>
+                <li>Exceptional interpersonal skills, with a focus on rapport-building, listening and questioning skills</li>
+                <li>Ability to conduct research into a wide range of computing issues</li>
+                <li>Strong documentation skills</li>
+                <li>Strong touch typing skills</li>
+                <li>Fluent English (French would be considered an asset)</li>
+
+                <b><p>Personal Attributes</p></b>
+                <li>Proven analytical and problem-solving abilities.</li>
+                <li>Highly self-motivated and directed.</li>
+                <li>Able to work under minimal supervision and make quick effective decisions</li>
+                <li>Ability to absorb and retain information quickly.</li>
+                <li>Ability to present ideas comfortably in a user-friendly, business-friendly and technical language.</li>
+                <li>Keen attention to detail.</li>
+              </ul>
+          </section>
+
+
+          <section>
+            <h3>IT Technical Support - Integri Consulting Inc. Markham, ON.</br>and Freelance Tech Support</h3>
+            <span class="byline">January 2013 - April 2021</span>
+            <p>IT Technical Support <span style="color:red">part time</span></br>Upgrading skills in Ansible, and Cloud Technologies Microsoft Azure, Amazon Web Services, and Digital Ocean.</br>Reviewing and Upgrading skills in Wordpress, coding in HTML, CSS, PHP, JavaScript, jQuery, and also refining my skills in Linux bash scripting, and Vim.</p>
+            <p>Responsible for troubleshooting and installation of Hardware and Software</p>
+            <ul class="default2">
+              <li>Software and hardware installation and troubleshooting</li>
+              <li>Equipment purchases (printers and monitors)</li>
+              <li>Hardware and office equipment maintenance</li>
+              <li>Backup, image and restoring data</li>
+            </ul>
+          </section>
+
+          <section>
+              <h3>IT Service Desk - Client Support Specialist, The Minto Group, Toronto, ON.</h3>
+              <span class="byline">Sep 2019 - Dec 2019</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Working at Minto central office in a face paced team environment, using Windows 10 and a variety of branded printers/scanners, audio visual conference rooms, and mobile telephony for approximately 1200 clients. Environment was distributed throughout Toronto (including headquarters), Ottawa, and in the State of Florida. Reported directly to the Service Desk Team Lead. My role was to ensure proper computer operations for the clients in Canada and the US, including Incident reports, service requests, and problem resolution for the IT infrastructure in a Windows Domain Controller environment and Virtual Environment through Citrix and VDI</li>
+                <li>Provide service and technical support to approximately 1200 clients geographically dispersed in Canada and the U.S.</li>
+                <li>Escalate problems (when required) to the Service Desk Team Lead</li>
+                <li>Record, track and document the IT request problem-solving process, including all successful and unsuccessful decisions made, and actions taken, through to final resolution</li>
+                <li>Apply diagnostic utilities to aid in troubleshooting</li>
+                <li>Access software updates, drivers, knowledge bases, and FAQ resources on the Internet/Intranet to aid in problem resolution</li>
+                <li>Re-image Windows 10 new computers systems, and installing software as require by the users in the company, following internal policies and security procedures</li>
+                <li>Perform hands-on fixes at the desktop level, including installing and upgrading software, installing hardware, implementing file backups, and configuring systems and applications</li>
+                <li>Perform preventative maintenance on desktop systems</li>
+                <li>Test fixes to ensure problem has been adequately resolved</li>
+                <li>Develop IT Knowledge Base and FAQ lists for end users</li>
+                <li>Update Asset Management System to reflect current environment</li>
+                <li>Reinforce internal Service Level Objectives to manage end-user expectations</li>
+                <li>Work directly with Senior Management to recommend technology solutions</li>
+                <li>Work with the Infrastructure and Business Systems teams in a support or collaboration capacity</li>
+              </ul>
+          </section>
+
+          <section>
+              <h3>Network Administrator - First Global Data, Toronto, ON.</h3>
+              <span class="byline">May 2017 - May 2018</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Linux and Windows servers installation, administration, and troubleshooting in both virtual and physical environments. Used Ansible as a configuration management tool and virtual environments through a type 2 hypervisor VMWare. I had a few VM hosts that I maintained and performed troubleshooting on a daily basis</li>
+                <li>Install new physical Linux Servers in CentriLogic colocation data center, to ensure they can be reached by developers remotely in India, LA, and South America, or locally by Sales, Marketing, and other local teams</li>
+                <li>Keep and maintain an Emergency Recovery Plan in case of failure that we build using cloud infrastructure on DigitalOcean droplets</li>
+                <li>Manage Windows desktops (Win10, and Win7) in a Domain Controller, and MAC laptops for Marketing and Design</li>
+                <li>Maintain and support company's existing IT network infrastructure and phone system (PBX, VOIP)</li>
+                <li>Maintain and change firewall policies to grant or deny access to the network resources</li>
+                <li>Participate in Move to Production nights or early mornings, working together with teams around the world</li>
+                <li>Using VIM editor to tweak the Linux systems settings and creating bash scripts to do daily maintenance on servers</li>
+                <li>Connect remotely to servers using SSH or RDP/MSTSC, or VNC</li>
+                <li>Configure CISCO VoIP telephones systems, and Asterisk System that manages all the telephone communication in the company, including conference rooms for communication around the world</li>
+                <li>Provided cellular phones, and communication to international workers for the company</li>
+                <li>Maintain the web environment by identifying system requirements, creating new web sites through modification of Domain Names, and providing TCP IP addressing</li>
+                <li>Patching and installing security upgrades and monitoring system performance using Nagios</li>
+                <li>Control and distribute software and apps for the users in the company, using a perpetual licensing or subscription base</li>
+                <li>Provide technical assistance remotely to our worldwide offices, with the Toronto office as the central hub</li>
+                <li>Research, purchase, implement, maintain, and track hardware and software</li>
+                <li>Perform database and systems backups, and keep the recovery procedures updated</li>
+                <li>Provide advanced troubleshooting skills and assistance to end users (Apple, Windows, and Linux)</li>
+                <li>Liaise and manage IT vendors when necessary</li>
+                <li>Create and update documentation of knowledge base, standard processes and procedures</li>
+                <li>Physical moves and new setups as required for company expansions, hiring contractors to conditioning and preparing new working areas or offices. Maintain and supervise the structured cabling in the server room, offices, and employee’s desks</li>
+                <li>Administer and securing the Wireless Access Network in the company, through the installation and maintenance of a few Access Points in different floors of the building</li>
+              </ul>
+          </section>
+
+          <section>
+              <h3>Programmer Analyst, Contract - Ministry of Health & Long Term Care, Toronto, ON. Classification S03, WIN 416355</h3>
+              <span class="byline">June 2011 - Febrary 2012</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Software developer, analyst, and designer, using HTML, CSS, JavaScript, and Microsoft SharePoint 2007 & 2010, Linux open source technologies (scripting using sed, awk, vim and bash) to implement web solutions. Everyday use of SharePoint Designer, Workflow Designer, and Visual Studio in the creation and maintenance of websites</li>
+                <li>Gathered requirements alongside the Business Analyst and team members</li>
+                <li>Configured, developed and enhanced web applications, and system solutions to align with the CSS "Corporate System Services" and operational plan to meet the needs of clients and stakeholders. Interpreting various government standards, policies, and procedures and incorporating them as requirements</li>
+                <li>Worked within a large project team with a number of clients/stakeholders (approximately 20 people in all). Followed an SDLC (Systems Development Life Cycle) process. Worked with high-performance waterfall-agile (hybrid) teams, where effective communication and documentation were vital to our success</li>
+                <li>Researched new methodologies and trends in Microsoft SharePoint, general development and architecture, security and risks/threats, and QA methods</li>
+                <li>Migrated data from different sources, i.e., Lotus Notes Servers, ASCII files, Tabular/Structured Files, etc. Applied the best solutions to manipulate the data and fit the data into the new site designs</li>
+                <li>Documented user procedures as required</li>
+                <li>QA, testing, and debugging. Also ensured the systems were secure and met authentication and authorization standards and requirements</li>
+                <li>Applied knowledge of project management methodologies, and change management, based on ITIL and PMP principles</li>
+              </ul>
+          </section>
+
+          <section>
+              <h3>Technical Support, Election Canada - Government of Canada</h3>
+              <span class="byline">April - May 2011</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Deploy windows and applications as needed</li>
+                <li>Setting up the elections office, continuous maintenance and troubleshooting for the elections office staff and training team (before and during), and taking down after the elections</li>
+              </ul>
+          </section>
+
+          <section>
+              <h3>Database Technical Support, Bantrel/Bechtel, Edmonton, AB.</h3>
+              <span class="byline">Year 2008</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Database managing system tech support, maintaining and troubleshooting the database using SQL queries and other tools (MS and Linux scripting), also using Microsoft Excel and Access to sort, distribute and present the information to the managers and users in the company. Installed firewalls and modified Windows Security Policies to meet company requirements</li>
+              </ul>
+          </section>
+
+          <section>
+              <h3>Tech Support Representative, Dell Canada, Edmonton, AB.</h3>
+              <span class="byline">Year 2005 - 2007</span>
+              <p>Job Description and Responsibilities:</p>
+              <ul class="default2">
+                <li>Troubleshooting hardware and software for Dell computers in the call center for home users, small/medium size businesses across Canada. First- and second-level support. Received training on the latest Dell hardware technology and software. At Dell, I learned the importance of measurement and results to drive business success. This experience has also given me some transferrable skills, such as how to balance the customer's needs and wants with the company's hard policies. It often took tact, negotiation skills, and sound judgment.</li>
+              </ul>
+              <span><br><br><br><br><br></span>
+              <span><hr style="width: 80%;margin-left: auto;margin-right: auto;opacity: 0.1;border-style: inset; border-width: 1px;"></span>
+              <span><br><br><br><br><br></span>
+          </section>
+        </div>
+        </li>
+
+        <li class="right">
+          <ul id="summary1" class="summary">
+            <li class="caption">Experience</li>
+              <ul class="demos">
+                <li><a href="index.html"><img src="./images/sidebars/expe01-400x200.jpg" alt="" height="120" width="200"></a></li>
+              </ul>
+            <li class="contents">
+              <p><a href="#Education">Education</a></p>
+              <p><a href="#Technologies">Technologies</a></p>
+              <p><a href="#Volunteering">Volunteering</a></p>
+              <p><a href="#Volunteering">Hobbies</a></p>
+              <li class="caption">
+              <p><a href="#CovLett">Cover Letter</a></p>
+              </li>
+            </li>
+          </ul>
+        </li>
+<!-- end Experience seccion -->
+
+
+<!-- Education seccion -->
+
+        <li class="left">
+          <h1 id="Education">Education</h1>
+        <!--</li>-->
+        <!--<li class="left">-->
+
+        <!--right row-->
+        <div class="12u">
+          <section>
+              <h2>University Francisco Marroquin "<a href="https://www.ufm.edu/" target="_blank" class="fa ">UFM</a>"</h2>
+              <ul class="default2">
+                <li>Bachelor of Engineering (BEng), Computer and Information Sciences and Support Services</li>
+                <li>Faculty of Business and Information Technology</li>
+                <li>Computer Programer, System Analyst, System Engineer</li>
+                <li>I finished my studies in Guatemala City, and got a Bachelor's Degree in Management Information Systems</li>
+              </ul>
+          </section>
+          <section>
+              <h2>Certifications</h2>
+              <ul class="default2">
+                  <li>Microsoft Certified Professional (MCSE exams), 2002-2003 Toronto Pearson & VUE Academies.</li>
+                  <li>Routers Cisco Installer & Configuration, Mexico City.</li>
+                  <li>Ansible Courses (Online @ Udemy 2018)</li>
+                  <li>Linux/Unix Certified, Guatemala City.</li>
+                  <li>CompTIA A+ Certificate, 2002-2003 Toronto Pearson & VUE Academies.</li>
+                  <li>Systems Analyst, UFM Guatemala City.</li>
+                  <li>Agile Training (Feb 2012). From the Ministry of Health and Long Term Care, Gov. of Ontario</li>
+                  <li>Use Case Modeling (July 2011). From the Ministry of Health and Long Term Care, Gov. of Ontario</li>
+              </ul>
+          </section>
+          <section>
+              <h2>General Courses</h2>
+              <ul class="default2">
+                  <li>Installation and configuration of NEWBRIDGE, MARTIS Multiplexors & Modems.</li>
+                  <li>Cisco Routers Installer, Mexico D.F., Mexico.</li>
+                  <li>Motorola Routers Installer, SetCom.</li>
+                  <li>Designing of WAN and LAN networks and structured wiring.</li>
+                  <li>Ansible Configuration, Management and Deplyment for Linux Systems.</li>
+                  <li>Quality Energy courses.</li>
+                  <li>Auditing and Security System Control, IBM.</li>
+                  <li>Communication Protocols Courses.</li>
+                  <li>Network Security.</li>
+                  <li>UNIX/Linux and TCP/IP, Taos Mountain Software.</li>
+                  <li>Data Bases and CASE Software Generator, Taos Mountain Software.</li>
+                  <li>Human Relations and Public Speaking, Dale Carnegie Academy.</li>
+                  <li>Structured Cabling and RF Connectors HELIAX and BELDEN.</li>
+                  <li>Correcting worker challenges, Association of Managers School (AGG).</li>
+              </ul>
+              <span><br><br><br><br><br></span>
+              <span><hr style="width: 80%;margin-left: auto;margin-right: auto;opacity: 0.1;border-style: inset; border-width: 1px;"></span>
+              <span><br><br><br><br><br></span>
+          </section>
+        </div>
+        </li>
+
+        <li class="right">
+            <ul id="summary2" class="summary">
+              <li class="caption">Education</li>
+              <ul class="demos">
+                  <li><a href="index.html"><img src="./images/sidebars/educ01-400x200.jpg" alt="" height="120" width="200"></a></li>
+              </ul>
+              <li class="contents">
+                  <p><a href="#Experience">Experience</a></p>
+                  <p><a href="#Technologies">Technologies</a></p>
+                  <p><a href="#Volunteering">Volunteering</a></p>
+                  <p><a href="#Volunteering">Hobbies</a></p>
+              </li>
+            </ul>
+        </li>
+<!-- end Education seccion -->
+
+
+<!-- Technologies seccion -->
+        <li class="left">
+          <h1 id="Technologies">Technologies Experience</h1>
+        <!--right row-->
+        <div class="12u">
+          <section>
+              <h2>Technologies I have experience with:</h2>
+              <ul class="default2">
+                <li>ANSIBLE Management Deployment Tool</li>
+                <li>AWS and Digital Ocean containers</li>
+                <li>Apache, Nginx, Tomcat</li>
+                <li>Axure RP Wireframing</li>
+                <li>Backups with DAS/NAS/SAN or Local Disks</li>
+                <li>Bash Linux Tools</li>
+                <li>Bash Scripting</li>
+                <li>Communication Protocols</li>
+                <li>Cross-Platform OS Compatibility</li>
+                <li>Electronics and Electricity</li>
+                <li>GIT Versioning Control</li>
+                <li>HTML5/CSS3 for web development</li>
+                <li>JavaScript/jQuery for web development</li>
+                <li>LAMP, WAMP</li>
+                <li>MAC Apple OS Troubleshooting</li>
+                <li>Microsoft Active Directory, ACLs on OU</li>
+                <li>Microsoft Cloud Azure</li>
+                <li>Microsoft Office, Visio, Sketch</li>
+                <li>Microsoft Windows Servers 2003/2008/2012</li>
+                <li>MySQL and MSQL Databases</li>
+                <li>Network Topologies</li>
+                <li>PBX Telephony and VoIP</li>
+                <li>Photoshop / Illustrator</li>
+                <li>Power, Voice and Data Wiring</li>
+                <li>RHEL,CentOS,Ubuntu Servers</li>
+                <li>Routers and Firewalls</li>
+                <li>SQL Query Language</li>
+                <li>SharePoint</li>
+                <li>Software and Hardware Security</li>
+                <li>Solid working experience with Vim,grep,awk,sed,find,etc</li>
+                <li>Structured Cabling</li>
+                <li>TCP/IP v4/v6</li>
+                <li>VMWare and Hyper-V</li>
+                <li>Windows, Linux and MAC desktop and laptops as a Client</li>
+                <li>WordPress CMS</li>
+              </ul>
+          </section>
+
+          <section>
+              <h2>Networking Design and Administration Expertise</h2>
+              <ul class="default2">
+                  <li>Was a project lead in implementing a new Network Operations Centre "NOC", with a $1M budget. Installed five SUN SPARKSTATIONS to control the operations in the fiber optic ring for TeleRed (Telco) (1996-2000).</li>
+                  <li>Installed UNIX and the applications to control the fiber optic RED, with a mix of SDH and PDH equipment with multiplexors NEWBRIDGE to deliver voice and data to a diverse group of customers (banks/commerce, manufacturing).</li>
+                  <li>Created rules and policies to add new nodes and links to the RED. Created a detailed path of each link and the information for each one (i.e., bandwidth, speed, starting-ending points) in various locations throughout the country.</li>
+                  <li>Trained technicians in the NOC to use the system and its applications to control the fiber optic ring and its components.</li>
+                  <li>Directed the technical team to optimize and troubleshoot the fiber optic ring; ran last mile tests; enabled segments of the net to do the maintenance while the redundancy ring was in operations; all controlled from the NOC.</li>
+                  <li>After this project, became a Network Consultant and Designer. I visited client teams and worked with their IT Operations. I focused on finding the best solutions to interconnect remote branches to their central offices, using diverse equipment and mostly CISCO routers and NEWBRIDGE and Motorola multiplexers, different brands of broadband modems, using copper, fiber optics or wireless links in the last mile.</li>
+                  <li>Worked with different network architectures ranging from mainframes, Windows and Linux servers, Novel environments -- in a diverse set of topologies, mostly working with TCP/IP protocol.</li>
+                  <li>Received training in Mexico City as a CISCO router installer.</li>
+              </ul>
+          </section>
+
+          <section>
+              <h2>Installing and Troubleshooting Hardware and Software Expertise</h2>
+              <ul class="default2">
+                  <li>As a technical support representative at DELL (Edmonton) and as Database Support at BANTREL (Edmonton), I conducted troubleshooting of Windows family systems, and answered customer calls to solve hardware and software issues. One of my best achievements at Dell was to be in the top ten best technical troubleshooters out of more than 500 technicians on the floor.</li>
+                  <li>At BANTREL, I managed database information. I have a good knowledge of SQL and scripting due to my work at BANTREL, where I received calls from the users and helped them to create queries to obtain information from the system. I also helped users with their office applications and computer issues.</li>
+              </ul>
+          </section>
+
+          <section>
+              <h2>Tools and Methods</h2>
+              <ul class="default2">
+                  <li>Data Migration from Lotus Notes and integration with the new applications (i.e., RSTS).</li>
+                  <li>Working with SAN Storage Systems and Microsoft Applications & Database design.</li>
+                  <li>Everyday use of SharePoint Designer and its components to support full Software Development Life Cycle.</li>
+                  <li>Developing mostly in SharePoint, but also HTML/XHTML/XML, JavaScript, other .NET technologies, and open source technologies.</li>
+                  <li>Testing and debugging. Standard code control. Replicating changes from the dev environment to testing and production environments.</li>
+                  <li>Documenting user procedures, process and methodologies as required, in the form of code, Visio diagrams, physical prototypes, reports, and spreadsheets.</li>
+                  <li>Applying knowledge of project management methodologies, and change management based on ITIL and PMP principles in this role and a number of previous roles.</li>
+                  <li>Managing risks in development and QA phases alongside client, PM, and QA team members.</li>
+                  <li>SQL queries and other tools (MS and Linux scripting), also using Microsoft Excel and Access to sort, distribute and present the information to the managers and users in the company.</li>
+                  <li>Installed firewalls - allowing and denying access to the network using the TCP/IP systems protocol. Also, modifying Windows Security Policies to meet company requirements.</li>
+              </ul>
+              <span><br><br><br><br><br></span>
+              <span><hr style="width: 80%;margin-left: auto;margin-right: auto;opacity: 0.1;border-style: inset; border-width: 1px;"></span>
+              <span><br><br><br><br><br></span>
+          </section>
+        </div>
+        </li>
+
+        <li class="right">
+            <ul id="summary3" class="summary">
+              <li class="caption">Technologies</li>
+              <ul class="demos">
+                  <li><a href="index.html"><img src="./images/sidebars/tech03-400x200.jpg" alt="" height="120" width="200"></a></li>
+              </ul>
+              <li class="contents">
+                  <p><a href="#Experience">Experience</a></p>
+                  <p><a href="#Education">Education</a></p>
+                  <p><a href="#Volunteering">Volunteering</a></p>
+                  <p><a href="#Volunteering">Hobbies</a></p>
+              </li>
+            </ul>
+        </li>
+<!-- end Technologies seccion -->
+
+
+<!-- Volunteering seccion -->
+        <li class="left">
+          <h1 id="Volunteering">Volunteering</h1>
+        <!--right row-->
+        <div class="12u">
+          <section id="Hobbies">
+              <h2>Volunteering</h2>
+              <ul class="default2">
+                  <li>Church Sunday school teacher for Grades 1-5</li>
+                  <li>Studio helper at Moksha Yoga Markham</li>
+                  <li>Markham Aquatic Club parent volunteer</li>
+                  <li>Day time volunteer as a cook and serving meals at North York Seniors Centre</li>
+                  <li>Teaching computer skills to families at Stanley Public School in Toronto</li>
+                  <li>Costa Rica Short-term Missions Trip - House building project</li>
+              </ul>
+              <span><br><br><br><br><br></span>
+              <span><hr style="width: 80%;margin-left: auto;margin-right: auto;opacity: 0.1;border-style: inset; border-width: 1px;"></span>
+              <span><br><br><br><br><br></span>
+          </section>
+
+        <li class="right">
+            <ul id="summary4" class="summary">
+              <li class="caption">Volunteering</li>
+              <ul class="demos">
+                  <li><a href="index.html"><img src="./images/sidebars/volu01-400x200.jpg" alt="" height="120" width="200"></a></li>
+              </ul>
+              <li class="contents">
+                  <p><a href="#Experience">Experience</a></p>
+                  <p><a href="#Education">Education</a></p>
+                  <p><a href="#Technologies">Technologies</a></p>
+                  <p><a href="#Volunteering">Hobbies</a></p>
+              </li>
+            </ul>
+        </li>
+<!-- end Volunteering seccion -->
+
+
+<!-- Hobbies seccion -->
+        <li class="left">
+          <h1>Hobbies</h1>
+        <!--right row-->
+        <div class="12u">
+          <section>
+            <h2>Hobbies</h2>
+             <ul class="default2">
+                  <li>Avid sportsman: running, yoga, swimming, soccer, baseball.</li>
+                  <li>IT Magazines: 2600 hacker quarterly, Linux Pro, Linux User, Admin Magazine</li>
+             </ul>
+              <span><br><br><br><br><br></span>
+              <span><hr style="width: 80%;margin-left: auto;margin-right: auto;opacity: 0.1;border-style: inset; border-width: 1px;"></span>
+              <span><br><br><br><br><br></span>
+          </section>
+        </div>
+        </li>
+
+        <li class="right">
+            <ul id="summary5" class="summary">
+              <li class="caption">Hobbies</li>
+              <ul class="demos">
+                  <li><a href="index.html"><img src="./images/sidebars/hobb01-400x200.jpg" alt="" height="120" width="200"></a></li>
+              </ul>
+              <li class="contents">
+                  <p><a href="#Experience">Experience</a></p>
+                  <p><a href="#Education">Education</a></p>
+                  <p><a href="#Technologies">Technologies</a></p>
+                  <p><a href="#Volunteering">Volunteering</a></p>
+              </li>
+            </ul>
+        </li>
+<!-- end Hobbies seccion -->
+
+      </ul>
+      </li>
+
+      <li class="footer">
+        <div class="main"><span class="title">Cover Letter</span><span> - keep scrolling. <a href="index.html#CovLett"><img src="./images/collage02.png" height="32" width="550"></a></span>
+        </div>
+      </li>
+      <li class="footer-content">
+        <div id="CovLett"class="main">
+          <h2>Cover Letter</h2>
+          <p>I would like to first summarize my core skills and expertise. I have advanced knowledge in Unix/Linux Operating Systems, I feel comfortable administering Linux Servers and its components to mention a few DNS, DHCP, LAMP, SSH Remote/Local Connections, SFTP, Firewalls and Security, Authentication, Encryption, I also have a good understanding of the TCP/IP protocol, VMWARE Virtualization, Linux Connectivity with Other Systems, AWS Cloud Technology, OS File Systems EXT4, NFS, SAMBA, NTFS, FAT, SAN or NAS, Fiber Optic Storage, RAID Backups Solutions.</p>
+          <p>I have a solid working knowledge of Linux OS internals (file systems, package managers, storage, process lifecycle, etc.), I also have advanced knowledge of Linux Systems (Implementation, Security, Backup/Recovery, and Administration), VIM editor, Linux commands, and scripting in shell BASH.</p>
+          <p>Next, I would like to talk about my background in IT. I spent many years working in a telecommunications company as a Technical Analyst, years that helped me gain my knowledge and basic technical principles. I worked in an environment where we had a diverse suite of equipment: from routers, multiplexers, fiber optic communications, to antennas, printers, telephone systems digital and analog, etc. I was proud to be part of a group of professionals with the task of creating a NOC were the challenge was to interconnect Solaris SPARCStations with the main ring of fiber optics for administration purposes, using Solaris Unix, and proprietary software to monitor the fiber nodes in a nationwide implementation.</p>
+          <p>After the successful creation of the NOC, I worked as a Technical Engineer where my main function was to interconnect IT Operation Centers to our fiber optic service to their remotes sites. This was where I learned to use a diverse group of telecommunication equipment and tools, including: radio modems for long distance links, fiber optic modems, routers, multiplexers, and any Linux or Windows Operating Systems that belonged to the client side, including type of connectors, wiring and pin assignment, configuration, etc. All this gave me the opportunity to learn extensively the TCP/IP subnetting system CIDR and Conventional to interconnect Information Systems. I also learned Security and Contingency practices for IT centers in case of Natural Disasters, Power Failures, and any other contingency that affect the daily operation of an IT center, and in conjunction with this practices I learned power conditioning, and backup.</p>
+          <p>Most importantly, I learned to work well with people and provide them with solutions that meet their needs, requirements, and offered exceptional customer support. While I worked with the Ministry of Health & Long-term Care, I often took on the role of a business analyst, working to gather business and user requirements. I also developed the ability of multitask and prioritize my tasks, in any fast paced environment.</p>
+          <p>I am a Microsoft Certified Professional (MCP). I have a CompTIA A+ certification; I was trained in Mexico City for a Routers Cisco Installer certification, and I received courses in Methods of Digital Transmission using Fiber Optics and Multiplexers. I also took courses in Agile Methodologies.</p>
+          <p>I have a passion for everything IT-related and I invest my time to learn new technologies, computer languages, new methods, and web development. For example, I can create and modify websites using PHP, HTML, JavaScript, CSS, WordPress, etc. in the internet or intranet environments. I am a fast learner and I am capable of adapting to any code technology that I am challenged with.</p>
+          <p>Finally I would like to say that I am a sportsperson. I value sports because it teaches me endurance and work through difficult situations. It also teaches me how to have fun and always have a positive attitude. I have curiosity, dedication, loyalty, and commitment to my work and to the IT community.</p>
+          <p>Yours sincerely,</p>
+          <h3><b>-Ron Estrada</b></h3>
+        </div>
+      </li>
+    </ul>
+    <a href="https://github.com/ronvox/ronvox-LnxEnv" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="./images/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+  </body>
+</html>
+
